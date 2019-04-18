@@ -6,4 +6,4 @@ Alipay payment integration
 #用于沙箱环境，具体看蚂蚁金服文档
 #AlipayF2FPayController文件是控制层，前端请求路径在这里
 #config和properties文件是alipay配置类和属性
-#
+#request文件是前台请求，使用axios，前台使用vue-cli框架
