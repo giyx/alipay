@@ -1,28 +1,6 @@
 server:
 #占用8081端口
   port: 8081
-#session过期时间
-  servlet:
-    session:
-      timeout: 1d
-mybatis-plus:
-  mapper-locations: classpath:/mybatis/mapper/*Mapper.xml
-  typeAliasesPackage: com.sdnuode.shoppingmanager.*.entity
-logging:
-  level:
-    com.sdnuode.shoppingmanager: info
-spring:
-  datasource:
-    druid:
-      url: jdbc:mysql://localhost:3306/personaluse
-      username: admin
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML5
-    encoding: UTF-8
 alipay:
     gatewayUrl: https://openapi.alipaydev.com/gateway.do
     appid: 2016092800616294
