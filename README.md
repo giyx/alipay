@@ -5,4 +5,5 @@ Alipay payment integration
 #.yml文件配置alipay
 #用于沙箱环境，具体看蚂蚁金服文档
 #AlipayF2FPayController文件是控制层，前端请求路径在这里
-#config和
+#config和properties文件是alipay配置类和属性
+#
