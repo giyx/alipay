@@ -1,0 +1,32 @@
+server:
+#占用8081端口
+  port: 8081
+#session过期时间
+  servlet:
+    session:
+      timeout: 1d
+mybatis-plus:
+  mapper-locations: classpath:/mybatis/mapper/*Mapper.xml
+  typeAliasesPackage: com.sdnuode.shoppingmanager.*.entity
+logging:
+  level:
+    com.sdnuode.shoppingmanager: info
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/personaluse
+      username: admin
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+alipay:
+    gatewayUrl: https://openapi.alipaydev.com/gateway.do
+    appid: 2016092800616294
+    privateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLZaHzePFSlKHMbCAmk1f9vuAQZI6zgWvIYk7BGsjXIN8MCbzB9ZH66hIhB4IiF4kiYX3btRKqGbw5v0YuTVuFnmrwWlIIvdLvJRZ6cmacJ/eFduBArlYuFnxw4K/LIdUAaVdXufGr5Q9iVb59sY4gbWikdwWs2Hs1vKVwJN0sLMEfXelqi4Ovy5Bd2zppL+YlMjCB3GmR5VkCZmde5QtCG4zUiSS2S+ulfWY3cSfjBpTO2QW3ulJy1tLGv+oQrmdtzEiltf+2KAm9aHBz4eCTk4SecyUN85LsxUVLh0qLJGuFOc6qamzFYfFmXbO5na+ymZJgA1zJVeH5VmGYg1LvAgMBAAECggEATMdRqhm2ZujqZsNOI6GtLoD2DdoXsBUjvaG2ftiAhgzHhcDLOyBa+a+QJl2yNvJRduP8YYppwEI0tkvIz0OuT7MsRQyjON+HF3UVliVHLJ09p2jnYCMvLviYAvgeA/0CbcRWDyyG2M9/ziv123bB4uXKAYNYZhXV9MQAY2PXBYw2padgpTOOebGYYXQUmD+5O8vYgdMb96ZUQlI7DNGcbK6BvBCUPZUP+dWIDU4N6TcBv2G2CNVd+bHEnULRXRm3euSDqvnHTXGg4vbpPFNYhuDY8+w2/44FbpmCw7KcSaV5MkY3fZYf1dv5oRLAHHYUxVWnYYfwbBR5Rl9Parq5mQKBgQD1NpzXwxpIMcOcQNoK2JaVNKYsHMDTlgP7L2UsgofQ4J1c+lKBZIrIfR4YUfsRfd+SWeLkU9S9csZ20AN+MNuGFXYzRoIJFGPjzGIrv1rxwIHjC/aQcXKO0Pbnb9NAP4/yEhy3yBIcS8x1ZEVnY4z3TGeB9eiSsjcU7j3VVS8vYwKBgQDUWB6Uv1Ap1gJis8VNHYvRPVF0Wo6GDOj+czU+4rtR+KhfHcXCKkiuMehtYHJRjVMFKf7cIA0Kgwqnfmo7GDLyBRDRe9TUwAjwQpb7yl2iq8YFEiiwmEV75BpuZw5uMUcakjct4SiwNxGX+nmOtM9WytDBEFetf52nYMrQztbiBQKBgC6G3T2nPE5ketwkBfs222OWKM2H6yJ6fWjktkq6vbBpXhJtQMhiXl7qNpKgw4WvH4OyYHW4Xk5P/849a9w+wvhvDA1wnG3Cm612c04fsc7bGwoMlA0WKYllpuOE+U1gghyJST+py53o1/OSQgT7A51MtvsWwLlM7VygU8Uts5VHAoGBAMP6iE70u0HBePYrwN9Jc6+sDi97HKtv4uJk5jGiBQzEmHEhA1IOwIG1IjVAnIHUE1lixwvWsPKQuxaXP+hGj057imgtB+NLUXSdoMfGn+Dw9JPdjJxgDVEo15QpnVHqPRuy8yZu9qScTqqby/D/w5TxHvXw5VsFuzWtycIqBH0ZAoGAHnrrmpTlaB64tM+4besonDdCYntm/1UT3alOM8c0fQweSGOXuRav95i3RgBarANsWmfVV+sSjgulBvrh00pulyu3BOWm4Hp83nJ4XxMT/gwd3zaAvHir4D+OOhl+xsWBUfFsr3mnLyZ0LvtkrO5ASB3ky/t0C+uFfYq8vSJxTgY=
+    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy2Wh83jxUpShzGwgJpNX/b7gEGSOs4FryGJOwRrI1yDfDAm8wfWR+uoSIQeCIheJImF927USqhm8Ob9GLk1bhZ5q8FpSCL3S7yUWenJmnCf3hXbgQK5WLhZ8cOCvyyHVAGlXV7nxq+UPYlW+fbGOIG1opHcFrNh7NbylcCTdLCzBH13paouDr8uQXds6aS/mJTIwgdxpkeVZAmZnXuULQhuM1IkktkvrpX1mN3En4waUztkFt7pSctbSxr/qEK5nbcxIpbX/tigJvWhwc+Hgk5OEnnMlDfOS7MVFS4dKiyRrhTnOqmpsxWHxZl2zuZ2vspmSYANcyVXh+VZhmINS7wIDAQAB
+    returnUrl: https://www.baidu.com/   #支付成功跳转的商家url
+    notifyUrl: https://www.google.com/      #异常跳转页面
